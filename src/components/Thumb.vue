@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 320px) {
   div {
     margin: 3px;
     width: 100px;
