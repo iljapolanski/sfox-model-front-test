@@ -28,11 +28,50 @@ export default {
 </script>
 
 <style scoped lang="scss">
+div {
+  margin: 3px;
+  width: 100px;
+  max-width: 100px;
+  .thumb-info {
+    flex-direction: column-reverse;
+  }
+  .thumb-container {
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .thumb-author {
+    max-width: 90px;
+    width: 90px;
+    font-size: 10px;
+  }
+  .thumb-id {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  div {
+    margin: 10px;
+    .thumb-container {
+      width: 320px;
+    }
+    .thumb-info {
+      flex-direction: row;
+    }
+    .thumb-author {
+      max-width: 205px;
+      width: 205px;
+      font-size: 14px;
+    }
+    .thumb-id {
+      font-size: 14px;
+    }
+  }
+}
   div {
     -webkit-box-shadow: 10px 10px 11px -7px rgba(36, 36, 36, 0.25);
     -moz-box-shadow: 10px 10px 11px -7px rgba(36, 36, 36, 0.25);
     box-shadow: 10px 10px 11px -7px rgba(36, 36, 36, 0.25);
-    margin: 10px;
     border: 1px solid #eee;
     box-sizing: border-box;
     display: flex;
@@ -40,7 +79,6 @@ export default {
     justify-content: center;
     flex-direction: column;
     .thumb-container {
-      width: 320px;
       height: auto;
       padding: 0px;
       margin: 0px;
@@ -54,7 +92,6 @@ export default {
     }
     .thumb-info {
       display: flex;
-      flex-direction: row;
       align-items: center;
       justify-content: space-between;
       width: 100%;
@@ -79,8 +116,6 @@ export default {
       }
       .thumb-author {
         align-items: flex-start;
-        max-width: 205px;
-        width: 205px;
         text-align: left;
         white-space: nowrap;
         overflow: hidden;

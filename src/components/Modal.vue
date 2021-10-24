@@ -25,6 +25,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media only screen and (min-width: 768px) {
+  .popup {
+    .modal-popup {
+      width: 1024px;
+      height: 786px;
+    }
+  }
+}
 .popup {
   position: fixed;
   top: 0px;
@@ -45,8 +53,8 @@ export default {
   }
   .modal-popup {
     position: fixed;
-    width: 1024px;
-    height: 786px;
+    width: 320px;
+    height: 240px;
     background-color: white;
     opacity: 1;
     iframe {

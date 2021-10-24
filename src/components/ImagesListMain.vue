@@ -73,7 +73,11 @@ export default {
         }
         this.imagesList = response.data.map(img => {
           img.thumbnailUrl = `${urlConstants.ITEM_URL}${img.id}/367/267`;
-          img.previewUrl = `${urlConstants.ITEM_URL}${img.id}/1024/786`;
+          if (window.pageXOffset < 768) {
+            img.previewUrl = `${urlConstants.ITEM_URL}${img.id}/320/240`;
+          } else {
+            img.previewUrl = `${urlConstants.ITEM_URL}${img.id}/1024/786`;
+          }
           return img;
         });
       });
@@ -112,11 +116,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .thumbs-container {
-  width: 1368px;
-  max-width: 1368px;
+  width: 320px;
+  max-width: 320px;
   margin: 0px auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .thumbs-container {
+    width: 1368px;
+    max-width: 1368px;
+  }
 }
 </style>

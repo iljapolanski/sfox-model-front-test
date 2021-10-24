@@ -50,16 +50,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media only screen and (min-width: 768px) {
+  .panel {
+    flex-direction: row;
+    .panel-filter {
+      border-right: 1px solid steelblue;
+    }
+    .panel-navigation {
+      border-right: 1px solid steelblue;
+    }
+  }
+}
 .panel {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   .panel-filter {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-right: 1px solid steelblue;
+    border-right: 0px solid steelblue;
     input {
       margin: 5px;
       border: 1px solid #ccc;
@@ -87,7 +98,7 @@ export default {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid steelblue;
+    border-right: 0px solid steelblue;
     .nav-btn {
       color: black;
       padding-right: 5px;
