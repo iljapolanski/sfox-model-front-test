@@ -2,16 +2,16 @@
   <div class="panel-container">
     <div class="panel">
       <div class="panel-filter">
-        <input placeholder="Author name" ref="authorName"/>
-        <a href="javascript: void(0);" class="filter-btn" @click="filterByAuthorName">Filter</a>
+        <input :placeholder="labels.author" ref="authorName"/>
+        <a href="javascript: void(0);" class="filter-btn" @click="filterByAuthorName">{{ labels.filter }}</a>
       </div>
       <div class="panel-navigation">
-        <a href="javascript: void(0);" class="nav-btn" @click="previousPage">Previous</a>
+        <a href="javascript: void(0);" class="nav-btn" @click="previousPage">{{ labels.prev }}</a>
         <div class="current-page">{{ currentPage }}</div>
-        <a href="javascript: void(0);" class="nav-btn" @click="nextPage">Next</a>
+        <a href="javascript: void(0);" class="nav-btn" @click="nextPage">{{ labels.next }}</a>
       </div>
       <div class="per-page">
-        <label>Thumbs per page</label>
+        <label>{{ labels.perPage }}</label>
         <select v-model="numPerPage" @change="setNumPerPage">
           <option v-for="paginationOption in paginationOptions"
                   v-bind:key="paginationOption"
@@ -33,6 +33,13 @@ export default {
     return {
       numPerPage: 30,
       paginationOptions: [4, 8, 16, 30, 60, 100],
+      labels: {
+        prev: 'Previous',
+        next: 'Next',
+        perPage: 'Thumbnails per page',
+        author: 'Author\'s name',
+        filter: 'Filter',
+      },
     };
   },
   methods: {
