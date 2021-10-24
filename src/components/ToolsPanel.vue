@@ -50,8 +50,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .panel {
+    width: 973px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .panel-filter {
+      border-right: 1px solid steelblue;
+    }
+    .panel-navigation {
+      border-right: 1px solid steelblue;
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .panel {
+    width: 722px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -65,7 +80,7 @@ export default {
 }
 @media only screen and (max-width: 767px) {
   .panel {
-    width: 300px;
+    width: 310px;
     margin: 0px auto;
     flex-direction: column-reverse;
     align-items: flex-end;
@@ -80,6 +95,9 @@ export default {
 }
 .panel {
   display: flex;
+  background-color: steelblue;
+  color: white;
+  margin: 0px auto;
   .panel-filter {
     display: flex;
     flex-direction: row;
@@ -91,7 +109,7 @@ export default {
     }
     .filter-btn {
       margin: 5px;
-      color: black;
+      color: whitesmoke;
       text-decoration: none;
       font-size: 12px;
       padding: 5px;
@@ -112,7 +130,7 @@ export default {
     align-items: center;
     justify-content: center;
     .nav-btn {
-      color: black;
+      color: whitesmoke;
       padding-right: 5px;
       padding-left: 5px;
       padding-bottom: 5px;
