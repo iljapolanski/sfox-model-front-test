@@ -64,6 +64,8 @@ export default {
     }
     .thumb-info {
       flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
     .thumb-author {
       max-width: 120px;

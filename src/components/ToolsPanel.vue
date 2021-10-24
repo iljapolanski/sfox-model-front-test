@@ -2,7 +2,7 @@
   <div class="panel">
     <div class="panel-filter">
       <input placeholder="Author name" ref="authorName"/>
-      <a href="javascript: void(0);" class="filter-btn" @click="filterByAuthorName">Apply</a>
+      <a href="javascript: void(0);" class="filter-btn" @click="filterByAuthorName">Filter</a>
     </div>
     <div class="panel-navigation">
       <a href="javascript: void(0);" class="nav-btn" @click="previousPage">Previous</a>
