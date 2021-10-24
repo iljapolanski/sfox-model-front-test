@@ -53,6 +53,8 @@ export default {
 @media only screen and (min-width: 768px) {
   .panel {
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     .panel-filter {
       border-right: 1px solid steelblue;
     }
@@ -63,7 +65,11 @@ export default {
 }
 @media only screen and (max-width: 768px) {
   .panel {
+    width: 300px;
+    margin: 0px auto;
     flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
     .panel-filter {
       border-right: 0px solid steelblue;
     }
@@ -74,8 +80,6 @@ export default {
 }
 .panel {
   display: flex;
-  align-items: center;
-  justify-content: center;
   .panel-filter {
     display: flex;
     flex-direction: row;

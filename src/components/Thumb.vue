@@ -101,7 +101,6 @@ export default {
     .thumb-info {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       width: 100%;
       padding: 15px;
       box-sizing: border-box;
@@ -114,6 +113,7 @@ export default {
         box-sizing: border-box;
         box-shadow: none;
         border: none;
+        width: auto;
       }
       .thumb-id {
         border-radius: 16px;
