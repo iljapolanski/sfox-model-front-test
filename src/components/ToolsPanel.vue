@@ -99,6 +99,8 @@ export default {
   background-color: steelblue;
   color: white;
   margin: 0px auto;
+  padding: 4px;
+  box-sizing: border-box;
   .panel-filter {
     display: flex;
     flex-direction: row;
