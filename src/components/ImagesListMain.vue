@@ -119,8 +119,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .thumbs-container {
-  width: 320px;
-  max-width: 320px;
+  width: 312px;
+  max-width: 312px;
   margin: 0px auto;
   display: flex;
   flex-direction: row;

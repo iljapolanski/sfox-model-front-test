@@ -31,22 +31,22 @@ export default {
 @media only screen and (max-width: 767px) {
   div {
     margin: 3px;
-    width: 100px;
-    max-width: 100px;
+    width: 98px;
+    max-width: 98px;
 
     .thumb-info {
       flex-direction: column-reverse;
     }
 
     .thumb-container {
-      width: 100px;
+      width: 98px;
       margin: 0px;
       padding: 0px;
     }
 
     .thumb-author {
-      max-width: 90px;
-      width: 90px;
+      max-width: 88px;
+      width: 88px;
       font-size: 10px;
     }
 

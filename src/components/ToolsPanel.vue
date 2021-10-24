@@ -83,10 +83,10 @@ export default {
 }
 @media only screen and (max-width: 767px) {
   .panel-container {
-    min-width: 320px;
+    min-width: 312px;
   }
   .panel {
-    width: 310px;
+    width: 302px;
     margin: 0px auto;
     flex-direction: column-reverse;
     align-items: flex-end;
