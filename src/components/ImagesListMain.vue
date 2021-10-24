@@ -71,7 +71,6 @@ export default {
           this.getImagesList();
           return;
         }
-        console.log(window.document.body.offsetWidth);
         this.imagesList = response.data.map(img => {
           img.thumbnailUrl = `${urlConstants.ITEM_URL}${img.id}/367/267`;
           if (window.document.body.offsetWidth < 750) {

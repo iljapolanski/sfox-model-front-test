@@ -3,16 +3,16 @@
     <div class="panel">
       <div class="panel-filter">
         <input :placeholder="labels.author" ref="authorName"/>
-        <a href="javascript: void(0);" class="filter-btn" @click="filterByAuthorName">{{ labels.filter }}</a>
+        <label class="filter-btn" @click="filterByAuthorName">{{ labels.filter }}</label>
       </div>
       <div class="panel-navigation">
-        <a href="javascript: void(0);" class="nav-btn" @click="previousPage">{{ labels.prev }}</a>
+        <label class="nav-btn" @click="previousPage">{{ labels.prev }}</label>
         <div class="current-page">{{ currentPage }}</div>
-        <a href="javascript: void(0);" class="nav-btn" @click="nextPage">{{ labels.next }}</a>
+        <label class="nav-btn" @click="nextPage">{{ labels.next }}</label>
       </div>
       <div class="per-page">
-        <label>{{ labels.perPage }}</label>
-        <select v-model="numPerPage" @change="setNumPerPage">
+        <label :for="numperpage-select">{{ labels.perPage }}</label>
+        <select :id="numperpage-select" v-model="numPerPage" @change="setNumPerPage">
           <option v-for="paginationOption in paginationOptions"
                   v-bind:key="paginationOption"
                   v-bind:value="paginationOption"
@@ -106,6 +106,14 @@ export default {
     }
   }
 }
+@mixin unselectable() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .panel-container {
   margin: 0px auto;
   padding: 0px;
@@ -129,6 +137,7 @@ export default {
       padding: 5px;
     }
     .filter-btn {
+      @include unselectable();
       margin: 5px;
       color: whitesmoke;
       text-decoration: none;
@@ -147,6 +156,7 @@ export default {
       background-color: white;
     }
     label {
+      @include unselectable();
       font-size: 12px;
       margin-left: 10px;
     }
@@ -157,6 +167,7 @@ export default {
     align-items: center;
     justify-content: center;
     .nav-btn {
+      @include unselectable();
       color: whitesmoke;
       padding-right: 5px;
       padding-left: 5px;
