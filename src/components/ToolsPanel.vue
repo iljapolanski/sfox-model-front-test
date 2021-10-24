@@ -1,22 +1,24 @@
 <template>
-  <div class="panel">
-    <div class="panel-filter">
-      <input placeholder="Author name" ref="authorName"/>
-      <a href="javascript: void(0);" class="filter-btn" @click="filterByAuthorName">Filter</a>
-    </div>
-    <div class="panel-navigation">
-      <a href="javascript: void(0);" class="nav-btn" @click="previousPage">Previous</a>
-      <div class="current-page">{{ currentPage }}</div>
-      <a href="javascript: void(0);" class="nav-btn" @click="nextPage">Next</a>
-    </div>
-    <div class="per-page">
-      <label>Thumbs per page</label>
-      <select v-model="numPerPage" @change="setNumPerPage">
-        <option v-for="paginationOption in paginationOptions"
-                v-bind:key="paginationOption"
-                v-bind:value="paginationOption"
-        >{{ paginationOption }}</option>
-      </select>
+  <div class="panel-container">
+    <div class="panel">
+      <div class="panel-filter">
+        <input placeholder="Author name" ref="authorName"/>
+        <a href="javascript: void(0);" class="filter-btn" @click="filterByAuthorName">Filter</a>
+      </div>
+      <div class="panel-navigation">
+        <a href="javascript: void(0);" class="nav-btn" @click="previousPage">Previous</a>
+        <div class="current-page">{{ currentPage }}</div>
+        <a href="javascript: void(0);" class="nav-btn" @click="nextPage">Next</a>
+      </div>
+      <div class="per-page">
+        <label>Thumbs per page</label>
+        <select v-model="numPerPage" @change="setNumPerPage">
+          <option v-for="paginationOption in paginationOptions"
+                  v-bind:key="paginationOption"
+                  v-bind:value="paginationOption"
+          >{{ paginationOption }}</option>
+        </select>
+      </div>
     </div>
   </div>
 </template>
@@ -80,12 +82,15 @@ export default {
   }
 }
 @media only screen and (max-width: 767px) {
+  .panel-container {
+    min-width: 320px;
+  }
   .panel {
     width: 310px;
     margin: 0px auto;
     flex-direction: column-reverse;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: center;
     .panel-filter {
       border-right: 0px solid steelblue;
     }
@@ -94,11 +99,17 @@ export default {
     }
   }
 }
+.panel-container {
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
 .panel {
   display: flex;
   background-color: steelblue;
   color: white;
-  margin: 0px auto;
+  margin: 5px;
   padding: 4px;
   box-sizing: border-box;
   .panel-filter {
