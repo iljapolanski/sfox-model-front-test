@@ -89,6 +89,7 @@ export default {
       padding: 0px;
       margin: 0px;
       box-sizing: border-box;
+      box-shadow: none;
       .thumb {
         width: auto;
         height: auto;
