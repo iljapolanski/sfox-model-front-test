@@ -28,25 +28,31 @@ export default {
 </script>
 
 <style scoped lang="scss">
-div {
-  margin: 3px;
-  width: 100px;
-  max-width: 100px;
-  .thumb-info {
-    flex-direction: column-reverse;
-  }
-  .thumb-container {
+@media only screen and (max-width: 768px) {
+  div {
+    margin: 3px;
     width: 100px;
-    margin: 0px;
-    padding: 0px;
-  }
-  .thumb-author {
-    max-width: 90px;
-    width: 90px;
-    font-size: 10px;
-  }
-  .thumb-id {
-    font-size: 10px;
+    max-width: 100px;
+
+    .thumb-info {
+      flex-direction: column-reverse;
+    }
+
+    .thumb-container {
+      width: 100px;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .thumb-author {
+      max-width: 90px;
+      width: 90px;
+      font-size: 10px;
+    }
+
+    .thumb-id {
+      font-size: 10px;
+    }
   }
 }
 @media only screen and (min-width: 768px) {

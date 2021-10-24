@@ -73,7 +73,7 @@ export default {
         }
         this.imagesList = response.data.map(img => {
           img.thumbnailUrl = `${urlConstants.ITEM_URL}${img.id}/367/267`;
-          if (window.pageXOffset < 768) {
+          if (window.document.body.offsetWidth < 768) {
             img.previewUrl = `${urlConstants.ITEM_URL}${img.id}/320/240`;
           } else {
             img.previewUrl = `${urlConstants.ITEM_URL}${img.id}/1024/786`;

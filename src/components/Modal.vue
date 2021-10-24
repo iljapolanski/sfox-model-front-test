@@ -30,6 +30,23 @@ export default {
     .modal-popup {
       width: 1024px;
       height: 786px;
+
+      iframe {
+        width: 1024px;
+        height: 786px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .popup {
+    .modal-popup {
+      width: 320px;
+      height: 240px;
+      iframe {
+        width: 320px;
+        height: 240px;
+      }
     }
   }
 }
@@ -53,13 +70,9 @@ export default {
   }
   .modal-popup {
     position: fixed;
-    width: 320px;
-    height: 240px;
     background-color: white;
     opacity: 1;
     iframe {
-      width: 1024px;
-      height: 786px;
       border: 0px solid white;
     }
     .modal-close {

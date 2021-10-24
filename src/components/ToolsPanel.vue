@@ -61,16 +61,25 @@ export default {
     }
   }
 }
+@media only screen and (max-width: 768px) {
+  .panel {
+    flex-direction: column-reverse;
+    .panel-filter {
+      border-right: 0px solid steelblue;
+    }
+    .panel-navigation {
+      border-right: 0px solid steelblue;
+    }
+  }
+}
 .panel {
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   .panel-filter {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-right: 0px solid steelblue;
     input {
       margin: 5px;
       border: 1px solid #ccc;
@@ -98,7 +107,6 @@ export default {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-right: 0px solid steelblue;
     .nav-btn {
       color: black;
       padding-right: 5px;
