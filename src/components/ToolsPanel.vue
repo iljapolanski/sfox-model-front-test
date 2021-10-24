@@ -9,7 +9,8 @@
       <div class="current-page">{{ currentPage }}</div>
       <a href="javascript: void(0);" class="nav-btn" @click="nextPage">Next</a>
     </div>
-    <div>
+    <div class="per-page">
+      <label>Thumbs per page</label>
       <select v-model="numPerPage" @change="setNumPerPage">
         <option v-for="paginationOption in paginationOptions"
                 v-bind:key="paginationOption"
@@ -57,10 +58,10 @@ export default {
     align-items: center;
     justify-content: center;
     .panel-filter {
-      border-right: 1px solid steelblue;
+      border-right: 1px solid whitesmoke;
     }
     .panel-navigation {
-      border-right: 1px solid steelblue;
+      border-right: 1px solid whitesmoke;
     }
   }
 }
@@ -71,10 +72,10 @@ export default {
     align-items: center;
     justify-content: center;
     .panel-filter {
-      border-right: 1px solid steelblue;
+      border-right: 1px solid whitesmoke;
     }
     .panel-navigation {
-      border-right: 1px solid steelblue;
+      border-right: 1px solid whitesmoke;
     }
   }
 }
@@ -119,10 +120,16 @@ export default {
       }
     }
   }
-  select {
-    margin-left: 10px;
-    border: 1px solid #ccc;
-    background-color: white;
+  .per-page {
+    select {
+      margin-left: 10px;
+      border: 1px solid #ccc;
+      background-color: white;
+    }
+    label {
+      font-size: 12px;
+      margin-left: 10px;
+    }
   }
   .panel-navigation {
     display: flex;
