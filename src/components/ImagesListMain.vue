@@ -122,11 +122,12 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 @media only screen and (min-width: 768px) {
   .thumbs-container {
-    width: 1368px;
-    max-width: 1368px;
+    width: 1000px;
+    max-width: 1000px;
   }
 }
 </style>

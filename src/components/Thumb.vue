@@ -59,14 +59,15 @@ export default {
   div {
     margin: 10px;
     .thumb-container {
-      width: 320px;
+      width: 227px;
+      max-width: 227px;
     }
     .thumb-info {
       flex-direction: row;
     }
     .thumb-author {
-      max-width: 205px;
-      width: 205px;
+      max-width: 120px;
+      width: 120px;
       font-size: 14px;
     }
     .thumb-id {
@@ -106,6 +107,7 @@ export default {
       box-sizing: border-box;
       box-shadow: none;
       border: none;
+      margin: 0px;
       .thumb-id, .thumb-author {
         margin: 0px;
         padding: 5px;
