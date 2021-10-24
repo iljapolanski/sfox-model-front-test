@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .popup {
     .modal-popup {
       width: 1024px;
@@ -38,7 +38,20 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .popup {
+    .modal-popup {
+      width: 700px;
+      height: 450px;
+
+      iframe {
+        width: 700px;
+        height: 450px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
   .popup {
     .modal-popup {
       width: 320px;

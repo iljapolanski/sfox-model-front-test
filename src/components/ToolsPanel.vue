@@ -63,7 +63,7 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .panel {
     width: 300px;
     margin: 0px auto;

@@ -71,10 +71,13 @@ export default {
           this.getImagesList();
           return;
         }
+        console.log(window.document.body.offsetWidth);
         this.imagesList = response.data.map(img => {
           img.thumbnailUrl = `${urlConstants.ITEM_URL}${img.id}/367/267`;
-          if (window.document.body.offsetWidth < 768) {
+          if (window.document.body.offsetWidth < 750) {
             img.previewUrl = `${urlConstants.ITEM_URL}${img.id}/320/240`;
+          } else if (window.document.body.offsetWidth >= 750 && window.document.body.offsetWidth < 1000) {
+            img.previewUrl = `${urlConstants.ITEM_URL}${img.id}/700/450`;
           } else {
             img.previewUrl = `${urlConstants.ITEM_URL}${img.id}/1024/786`;
           }
@@ -124,10 +127,16 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .thumbs-container {
     width: 1000px;
     max-width: 1000px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .thumbs-container {
+    width: 754px;
+    max-width: 754px;
   }
 }
 </style>
